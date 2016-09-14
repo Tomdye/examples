@@ -1,5 +1,7 @@
 module.exports = function (grunt) {
 	grunt.loadNpmTasks('grunt-contrib-stylus');
+	grunt.loadNpmTasks('grunt-contrib-watch');
+
 	var staticFiles = [ 'src/**/*.html', 'src/styles/**/*.css', 'src/styles/fonts/*', 'src/images/**/*.png' ];
 
 	require('grunt-dojo2').initConfig(grunt, {
@@ -20,6 +22,13 @@ module.exports = function (grunt) {
 					ext: '.css',
 					dest: '_build/src/styles/css/app.css'
 				} ]
+			}
+		},
+		watch: {
+			stylus: {
+				files: ['src/styles/stylus/*.styl'],
+				tasks: ['stylus:compile'],   // This needs to be "tasks" (not "task")
+				options : { livereload: true },
 			}
 		}
 	});
