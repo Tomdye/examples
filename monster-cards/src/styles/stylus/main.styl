@@ -8,6 +8,21 @@ body, html {
 main {
 	width: 100%;
 	height: 100%;
+	position: relative;
+}
+
+// Assuming layout is
+// <main>
+//	<header>
+//	<div class='content'>
+//	<footer>
+.content {
+	position: absolute;
+	top: header-height;
+	bottom: footer-height;
+	left: 0;
+	right: 0;
+	scroll: auto;
 }
 
 .pull-left {
