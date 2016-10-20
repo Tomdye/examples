@@ -7,7 +7,8 @@ import createNavbar from './widgets/navbar/createNavbar';
 import createCardDescription from './widgets/cardDetails/createCardDescription';
 import createContainer from './widgets/common/createContainer';
 import createCard from './widgets/card/createCard';
-import createCardsList from './widgets/cards/createCardsList';
+import createCardSummary from './widgets/card/createCardSummary';
+// import createCardsList from './widgets/cards/createCardsList';
 import defaultWidgetStore from './stores/widgetStore';
 
 const app = createApp({ defaultWidgetStore });
@@ -22,6 +23,10 @@ app.loadDefinition({
 		{
 			name: 'card-description',
 			factory: createCardDescription
+		},
+		{
+			name: 'milestone-card-summary',
+			factory: createCardSummary
 		}
 	],
 	widgets: [
@@ -61,7 +66,7 @@ app.loadDefinition({
 		},
 		{
 			id: 'cardsList',
-			factory: createCardsList
+			factory: createContainer
 		}
 	]
 });
