@@ -7,6 +7,7 @@ import createNavbar from './widgets/navbar/createNavbar';
 import createCardDescription from './widgets/cardDetails/createCardDescription';
 import createContainer from './widgets/common/createContainer';
 import createCard from './widgets/card/createCard';
+import createCardsList from './widgets/cards/createCardsList';
 import defaultWidgetStore from './stores/widgetStore';
 
 const app = createApp({ defaultWidgetStore });
@@ -49,6 +50,18 @@ app.loadDefinition({
 		{
 			id: 'cardDetailsJumbotron',
 			factory: createContainer
+		},
+		{
+			id: 'cards',
+			factory: createContainer
+		},
+		{
+			id: 'cardsJumbotron',
+			factory: createContainer
+		},
+		{
+			id: 'cardsList',
+			factory: createCardsList
 		}
 	]
 });

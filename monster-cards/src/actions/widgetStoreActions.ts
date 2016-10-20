@@ -21,6 +21,7 @@ export const putCard = createAction({
 	do({ afterAll, puts }: ChangeRecord) {
 		if (puts.length) {
 			const children = afterAll.map(({ id }) => id);
+			widgetStore.patch({ id: 'cardsList', cards: [ ...afterAll ] });
 
 			return Promise.all(puts.map(createWidgetsRecords))
 				.then(() => widgetStore.patch({ id: 'cardDetailsNavbar', children: children }));
