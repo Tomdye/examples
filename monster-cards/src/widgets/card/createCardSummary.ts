@@ -39,7 +39,7 @@ const create = createRenderMixin
 							state: {
 								label: options.state.name
 							},
-							tagName: 'h1'
+							tagName: 'h2'
 						}
 					},
 					score: {
@@ -47,9 +47,9 @@ const create = createRenderMixin
 						options: {
 							state: {
 								classes: [ 'points' ],
-								label: `milestone points: ${options.state.name}`
+								label: `milestone points: ${options.state.score}`
 							},
-							tagName: 'span'
+							tagName: 'p'
 						}
 					}
 				})
@@ -57,6 +57,8 @@ const create = createRenderMixin
 					instance.invalidate();
 				});
 		}
+	}).extend({
+		classes: [ 'cardSummary' ]
 	});
 
 export default create;
