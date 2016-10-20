@@ -21,7 +21,7 @@ type CardsListFactory = ComposeFactory<CardsList, CardsListOptions>;
 function manageChildren(this: any) {
 	const { cards } = this.state;
 	const cardWidgets = cards.map((card: any) => createCard({
-		state: Object.assign({}, card, { classes: [ 'large' ] })
+		state: card
 	}));
 	this.append(cardWidgets);
 }
