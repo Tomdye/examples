@@ -1,10 +1,7 @@
 @import '../../variables.css';
 
 .root {
-	align-items: center;
 	background: var(--color-blue);
-	display: flex;
-	justify-content: center;
 }
 
 .headerRoot {

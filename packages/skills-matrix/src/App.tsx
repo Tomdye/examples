@@ -3,6 +3,7 @@ import Outlet from '@dojo/framework/routing/Outlet';
 
 import * as css from './App.m.css';
 import router from './middleware/router';
+import theme from '@dojo/framework/core/middleware/theme';
 import { store } from './middleware/store';
 import { loadAssessment, newAssessment } from './processes/assessment.processes';
 import { loadAssessments } from './processes/assessments.processes';
@@ -12,17 +13,23 @@ import { Compare } from './widgets/compare/Compare';
 import Header from './widgets/header/Header';
 import { Home } from './widgets/home/Home';
 import { Skills } from './widgets/skills/Skills';
+import dojoTheme from '@dojo/widgets/theme/dojo';
 
-const factory = create({ store, router });
+const factory = create({ store, router, theme });
 
 export default factory(function App({
 	middleware: {
 		store: { get, path, executor },
-		router
+		router,
+		theme
 	}
 }) {
 	if (!get(path('matrix'))) {
 		return null;
+	}
+
+	if (!theme.get()) {
+		theme.set(dojoTheme);
 	}
 
 	return (

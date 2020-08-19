@@ -56,11 +56,6 @@ export const Home = factory(function ({
 		<div classes={css.column}>
 			<h1 classes={css.heading}>
 				<Icon
-					classes={{
-						'@dojo/widgets/icon': {
-							icon: [css.icon]
-						}
-					}}
 					type="plusIcon"
 				/>
 				Create New / Edit Existing
@@ -86,22 +81,11 @@ export const Home = factory(function ({
 		<div classes={css.column}>
 			<h1 classes={css.heading}>
 				<Icon
-					classes={{
-						'@dojo/widgets/icon': {
-							icon: [css.icon]
-						}
-					}}
 					type="searchIcon"
 				/>
 				Compare Profiles
 			</h1>
 			<TextArea
-				classes={{
-					'@dojo/widgets/text-area': {
-						input: [css.textArea],
-						inputWrapper: [css.wrapper]
-					}
-				}}
 				initialValue={hashes}
 				onValue={(value) => icache.set('hashes', value)}
 				placeholder="Enter multiple hashes separated by commas or new lines…"

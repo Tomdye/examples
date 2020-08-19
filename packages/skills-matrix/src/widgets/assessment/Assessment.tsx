@@ -23,12 +23,6 @@ const Widget = factory(function ({ properties, children }) {
 					skillAssessments.map(({ skill, level }) => (
 						<Chip
 							key={skill}
-							classes={{
-								'@dojo/widgets/chip': {
-									root: [css.chip],
-									iconWrapper: [css.chipIcon]
-								}
-							}}
 						>
 							{{
 								label: skill,

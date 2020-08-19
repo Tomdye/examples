@@ -26,11 +26,6 @@ export default factory(function ({ properties }) {
 	return (
 		<div classes={[css.root]}>
 			<Header
-				classes={{
-					'@dojo/widgets/header': {
-						root: [css.headerRoot]
-					}
-				}}
 			>
 				{{
 					title: 'Skill Tracker',

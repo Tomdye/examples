@@ -34,12 +34,12 @@
 }
 
 .listItemRoot {
-	height: auto;
+	color: red !important;
 }
 
 .listItemSelected {
 	background: white;
-	color: gray;
+	color: red !important;
 }
 
 .menu {

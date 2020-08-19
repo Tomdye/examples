@@ -33,12 +33,6 @@ export const SkillsetFilter = factory(function ({ id, properties, middleware: { 
 					icache.set('selected', values);
 					onChange?.(values);
 				}}
-				classes={{
-					'@dojo/widgets/chip': {
-						root: [css.chip],
-						closeIconWrapper: [css.chipIcon]
-					}
-				}}
 			>
 				{{ label: skill }}
 			</Chip>
@@ -49,18 +43,6 @@ export const SkillsetFilter = factory(function ({ id, properties, middleware: { 
 	const content = (
 		<div classes={css.controls}>
 			<Typeahead
-				classes={{
-					'@dojo/widgets/list-item': {
-						root: [css.listItemRoot],
-						selected: [css.listItemSelected]
-					},
-					'@dojo/widgets/text-input': {
-						input: [css.input]
-					},
-					'@dojo/widgets/typeahead': {
-						menuWrapper: [css.menu]
-					}
-				}}
 				resource={resource({
 					template: typeAheadResourceTemplate,
 					initOptions: {

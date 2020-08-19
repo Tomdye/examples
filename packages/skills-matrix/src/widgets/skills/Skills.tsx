@@ -58,11 +58,6 @@ export const Skills = factory(function ({
 					{{
 						trailing: (
 							<Button
-								classes={{
-									'@dojo/widgets/button': {
-										root: [css.copyButton, icache.get('success') && css.successButton]
-									}
-								}}
 								onClick={() => {
 									copyToClipboard(buildCopyUrl([hash || '']));
 									icache.set('success', true);

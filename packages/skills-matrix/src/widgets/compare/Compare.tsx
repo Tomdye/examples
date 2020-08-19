@@ -75,11 +75,6 @@ export const Compare = factory(function ({
 					{{
 						trailing: (
 							<Button
-								classes={{
-									'@dojo/widgets/button': {
-										root: [css.copyButton, icache.get('success') && css.successButton]
-									}
-								}}
 								onClick={() => {
 									copyToClipboard(
 										buildCopyUrl(

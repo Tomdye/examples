@@ -22,12 +22,6 @@ export default factory(function ({ properties, children }) {
 
 	return (
 		<TextInput
-			classes={{
-				'@dojo/widgets/text-input': {
-					input: inputWidgetStyles,
-					inputWrapper: [css.wrapper]
-				}
-			}}
 			{...properties()}
 		>
 			{{
